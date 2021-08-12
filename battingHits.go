@@ -10,8 +10,8 @@ import "fmt"
 // Declare a struct that represents a ball player.
 type player struct{
 	name string
-	atBats int
-	hits int
+	atBats float64
+	hits float64
 }
 // Include fields called name, atBats and hits.
 
@@ -27,11 +27,11 @@ func main() {
 	players := []player{
 		{"Vedant", 10, 7},
 		{"Kaustubh", 12, 6},
-		{"Siddesh", 6, 4},
+		{"Siddhesh", 6, 4},
 	}
 
 	// Display the batting average for each player in the slice.
 	for _, p := range players{
-		fmt.Printf("%s: Average [.%.f]\n", p.name, p.average()*100)
+		fmt.Printf("%s: Average [%.f]\n", p.name, p.average()*100)
 	}
 }
